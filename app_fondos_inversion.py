@@ -76,23 +76,24 @@ section.main > div { padding-left: 0 !important; padding-right: 0 !important; pa
 .access-cta { display: none; }
 .btn-folder { display:inline-block; width:100%; background:#005aa0; color:white !important; border-radius:10px; padding:14px 28px; font-family:'Syne', sans-serif; font-weight:600; font-size:13px; letter-spacing:1px; text-align:center; text-decoration:none; transition:background 0.2s; }
 .btn-folder:hover { background:#004080; color:white !important; text-decoration:none; }
-.docs-mini-card {
+ .docs-mini-card {
     background: #ffffff;
-    border-radius: 14px;
-    padding: 14px 18px;
+    border-radius: 12px;
+    padding: 10px 14px;
     border: 1px solid #e8e4df;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 14px;
-    margin-top: 22px;
+    gap: 12px;
+    margin: 18px auto 0 auto;
+    max-width: 360px;
 }
-.docs-mini-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.docs-mini-icon { font-size: 22px; flex-shrink: 0; }
-.docs-mini-title { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: #0d1b2a; margin: 0; }
-.docs-mini-desc { font-size: 11.5px; color: #777; margin: 2px 0 0 0; line-height: 1.35; }
-.docs-mini-link { white-space: nowrap; color: #005aa0 !important; font-size: 12px; font-weight: 700; text-decoration: none; }
+.docs-mini-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.docs-mini-icon { font-size: 18px; flex-shrink: 0; }
+.docs-mini-title { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: #0d1b2a; margin: 0; }
+.docs-mini-desc { display: none; }
+.docs-mini-link { white-space: nowrap; color: #005aa0 !important; font-size: 11.5px; font-weight: 700; text-decoration: none; }
 .docs-mini-link:hover { color: #003366 !important; text-decoration: underline; }
 .seccion-titulo { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #444; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #ddd; }
 
@@ -387,7 +388,7 @@ def mostrar_cabecera(subtitulo="Portal de trabajos realizados en SGAMET"):
 # 2. PANTALLA DE INICIO · CUADRO DE MANDO
 # =============================================================
 def mostrar_inicio():
-    mostrar_cabecera("Cuadro de Mando · Fondos de inversión")
+    mostrar_cabecera("Fondos de inversión")
 
     _margen_izq, area, _margen_der = columnas_contenido()
     with area:
@@ -402,7 +403,7 @@ def mostrar_inicio():
         st.markdown('<div class="seccion-titulo">Acceso al cuadro de mando</div>', unsafe_allow_html=True)
 
         # Tarjeta principal centrada, como en la versión inicial.
-        col1, col2, col3 = st.columns([1, 1.25, 1], gap="large")
+        col1, col2, col3 = st.columns([0.75, 1.7, 0.75], gap="large")
         with col2:
             st.markdown("""
             <div class="access-card" style="--card-color: #375623;">
@@ -420,11 +421,10 @@ def mostrar_inicio():
                 <div class="docs-mini-left">
                     <span class="docs-mini-icon">📁</span>
                     <div>
-                        <p class="docs-mini-title">Documentos de instrucciones</p>
-                        <p class="docs-mini-desc">Carpeta compartida con instrucciones y documentación de apoyo.</p>
+                        <p class="docs-mini-title">Documentos</p>
                     </div>
                 </div>
-                <a href="{ENLACE_INSTRUCCIONES}" target="_blank" class="docs-mini-link">Abrir carpeta ↗</a>
+                <a href="{ENLACE_INSTRUCCIONES}" target="_blank" class="docs-mini-link">Abrir ↗</a>
             </div>
             """, unsafe_allow_html=True)
 
@@ -432,7 +432,7 @@ def mostrar_inicio():
 # 4. OPERADORAS
 # =============================================================
 def mostrar_fondos():
-    mostrar_cabecera("Cuadro de Mando · Fondos de inversión")
+    mostrar_cabecera("Fondos de inversión")
 
     _margen_izq, area, _margen_der = columnas_contenido()
     with area:
