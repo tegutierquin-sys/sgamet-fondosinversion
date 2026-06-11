@@ -79,7 +79,7 @@ section.main > div { padding-left: 0 !important; padding-right: 0 !important; pa
  .docs-mini-card {
     background: #ffffff;
     border-radius: 12px;
-    padding: 10px 14px;
+    padding: 11px 14px;
     border: 1px solid #e8e4df;
     box-shadow: 0 6px 18px rgba(0,0,0,0.05);
     display: flex;
@@ -91,8 +91,8 @@ section.main > div { padding-left: 0 !important; padding-right: 0 !important; pa
 }
 .docs-mini-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .docs-mini-icon { font-size: 18px; flex-shrink: 0; }
-.docs-mini-title { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: #0d1b2a; margin: 0; }
-.docs-mini-desc { display: none; }
+.docs-mini-title { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 700; color: #0d1b2a; margin: 0 0 2px 0; }
+.docs-mini-desc { font-size: 11px; color: #777; line-height: 1.25; margin: 0; }
 .docs-mini-link { white-space: nowrap; color: #005aa0 !important; font-size: 11.5px; font-weight: 700; text-decoration: none; }
 .docs-mini-link:hover { color: #003366 !important; text-decoration: underline; }
 .seccion-titulo { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #444; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #ddd; }
@@ -422,6 +422,7 @@ def mostrar_inicio():
                     <span class="docs-mini-icon">📁</span>
                     <div>
                         <p class="docs-mini-title">Documentos</p>
+                        <p class="docs-mini-desc">Documentación necesaria para el uso del cuadro de mando.</p>
                     </div>
                 </div>
                 <a href="{ENLACE_INSTRUCCIONES}" target="_blank" class="docs-mini-link">Abrir ↗</a>
