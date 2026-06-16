@@ -370,7 +370,7 @@ if not st.session_state.autenticado:
     with col2:
         clave = st.text_input("Clave", type="password", label_visibility="collapsed", placeholder="Contraseña...")
         if st.button("Entrar", use_container_width=True, key="btn_login"):
-            clave_correcta = st.secrets.get("ACCESS_PASSWORD", "SGAMET2026")
+            clave_correcta = CONTRASENA
             if clave == clave_correcta:
                 st.session_state.autenticado = True
                 st.rerun()
