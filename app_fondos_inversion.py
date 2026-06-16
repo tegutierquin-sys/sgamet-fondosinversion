@@ -39,6 +39,26 @@ section.main > div { padding-left: 0 !important; padding-right: 0 !important; pa
     max-width: 480px; margin: 40px auto;
     box-shadow: 0 8px 32px rgba(0,0,0,0.25); text-align: center;
 }
+.aviso-confidencial-login {
+    background: #fff8e1;
+    border: 1px solid #F2C811;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 18px 0 18px 0;
+    color: #4a3a00;
+    font-size: 12.5px;
+    line-height: 1.45;
+    text-align: left;
+}
+.aviso-confidencial-login strong {
+    display: block;
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #003366;
+    margin-bottom: 4px;
+}
 .logo-container { text-align: center; margin-bottom: 24px; }
 .separador-amarillo { border: none; border-top: 2px solid #F2C811; margin: 16px 0 24px 0; }
 .login-titulo-inst { font-size: 1.3rem; font-weight: 700; color: #003366; text-align: center; line-height: 1.4; margin-bottom: 4px; }
@@ -339,6 +359,10 @@ if not st.session_state.autenticado:
         <hr class="separador-amarillo"/>
         <p class="login-titulo-inst">Portal de Análisis · SGAMET</p>
         <p class="login-subtitulo-inst">Subdirección General de Análisis de Mercado y Evolución Tecnológica</p>
+        <div class="aviso-confidencial-login">
+            <strong>Acceso restringido</strong>
+            Este portal contiene información de uso interno. La información no debe compartirse ni redistribuirse fuera del ámbito autorizado.
+        </div>
         <p class="login-label">Introduce la clave para acceder</p>
     </div>
     """, unsafe_allow_html=True)
